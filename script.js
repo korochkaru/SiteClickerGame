@@ -3,15 +3,14 @@ upgradesEl = document.getElementById("Upgrades");
 
 let clicked = 0;
 let balance = 0;
-let upgrades = 0;
+let upgrades = 1;
 
 balanceEl.textContent = balance;
 upgradesEl.textContent = upgrades;
 
 function coin(){
     clicked++;
-    if (upgrades<=1){balance+=1;}
-    else {balance= balance+(1*upgrades);}
+    balance+=upgrades;
     if (clicked % 100 === 0){addUpg();}
     if (balance>=10000){balance=0; clicked=0; upgrades=0;}
     balanceEl.textContent = balance;
